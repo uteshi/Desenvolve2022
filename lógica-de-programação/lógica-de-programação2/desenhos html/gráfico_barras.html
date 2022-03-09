@@ -1,0 +1,52 @@
+<canvas width="600" height="400">
+</canvas>
+
+<script>
+
+
+    function grafico(x, y, largura, altura, cor){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, largura, altura);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, largura, altura);
+    }
+
+    function texto(x, y, texto){
+        var tela = document.querySelector('canvas')
+        var pincel = tela.getContext('2d');
+
+        pincel.font = '15px Gerogia';
+        pincel.fillStyle = 'black';
+        pincel.fillText(texto, x, y);
+
+    }
+    texto(0,50, 'Navegadores mais utilizados na Alura pelos alunos')
+    //Gráfico 2015
+    texto(0, 90, '2015');
+    grafico(0, 100, 50, 50, 'blue');
+    grafico(0, 150, 50, 25, 'green');
+    grafico(0, 175, 50, 20, 'yellow');
+    grafico(0, 195, 50, 5, 'red');
+
+    //Gráfico 2016
+    texto(100, 90, '2016');
+    grafico(100, 100, 50, 65, 'blue');
+    grafico(100, 165, 50, 20, 'green');
+    grafico(100, 185, 50, 13, 'yellow');
+    grafico(100, 198, 50, 2, 'red');
+
+    //Referências
+    texto(0, 250, 'Chrome');
+    grafico(0, 220, 10, 10, 'blue');
+    texto(100, 250, 'Firefox');
+    grafico(100, 220, 10, 10, 'green');
+    texto(200, 250, 'Safari');
+    grafico(200, 220, 10, 10, 'yellow');
+    texto(300, 250, 'Outros');
+    grafico(300, 220, 10, 10, 'red');
+    
+
+</script>

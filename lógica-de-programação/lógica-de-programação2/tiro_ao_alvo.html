@@ -1,0 +1,52 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 10;
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    desenhaCirculo(300,200, raio + 20, 'red'); // maior círculo
+    desenhaCirculo(300,200, raio + 10, 'white');
+    desenhaCirculo(300,200, raio, 'red'); // menor circulo
+    var acertoux = [310, 290];
+    var acertouy = [210, 190];
+    var disparox = 0;
+    var disparoy =0;
+     
+    function dispara(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop; 
+        console.log(x + ',' + y);
+        disparox = x
+        disparoy = y
+       // lógica de acerto?
+       if(disparox <= 310){
+           if(disparox >= 290){
+               if(disparoy <= 210){
+                   if(disparoy >=190){
+                       alert("Você ACERTOU!!!")
+                   }else{alert("Você ERROU!")}
+               }
+           }
+       }
+    }
+
+   
+
+    tela.onclick = dispara;
+
+</script>
