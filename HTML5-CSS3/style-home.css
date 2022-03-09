@@ -1,0 +1,82 @@
+#banner {
+    width: 100%;
+}
+header {
+    display: inline;
+    vertical-align: middle;
+    margin-top: 100px;
+    align-items: center;
+}
+.titulo-principal {
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+.logo-barbearia {
+    width: 100px;
+    vertical-align: top;
+    display: inline;
+    position: relative;
+}
+.caixa {
+    display: inline;
+}
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    color: #000000;
+}
+.principal {
+    background: #CCCCCC;
+    padding: 30px;
+    font-weight: bold;
+}
+.titulo-centralizado {
+    text-align: center;
+    font-size: 25px;
+}
+p {
+    text-align: center;
+}
+#missao{
+    font-size: 20px;
+}
+em strong{
+    color: red;
+}
+.itens{
+    font-style: italic;
+    text-align: left;
+    font-size: 25px;
+}
+.beneficios {
+    background: #FFFFFF;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+.imagembeneficios{
+    width:50%;
+    margin-right: 0px;
+}
